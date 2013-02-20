@@ -26,16 +26,7 @@ public class ItemTent extends ItemBlock {
 	@SideOnly(Side.CLIENT)
 	public int getIconFromDamage(int i) 
 	{
-		switch (i) 
-		{
-		case 0:return 18;
-		case 1:return 18;
-		case 2:return 18;
-		case 3:return 18;
-		case 4:return 18;
-		case 5:return 18;
-		default:return 18;
-		}
+		return 18;
 	}
 
 	@SideOnly(Side.CLIENT)
