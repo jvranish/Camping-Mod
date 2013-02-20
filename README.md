@@ -1,19 +1,19 @@
-The-Camping-mod
-===============
-
-Welkom to the camping mod universal source for minecraft 1.4.6 and 1.4.7.
-This sourse is the remake of RikMuld's Camping mods. without the modules, and with mutch better codes.
-the public releas is about the end of february. 
-
-links the the "RikMuld's camping mods" posts on some websites.
-
-[official planet minecraft post] (http://www.minecraftforum.net/topic/1566230-147rikmulds-camping-mods100-pre2ssplansmp-camping-bags-and-radish/)
-
-[official minecraft forum post] (http://www.planetminecraft.com/mod/campfire-mod-campfire-will-be-your-new-better-furnace/)
-
-[official website] (rikmuld.com)  - Contains the downloads.
-
----------------------------------------------------------------------------------------
-
-If you already want to have this mod, you can compile it. but expent bugs becous it is untested.
-search on google how to compile it.
+The-Camping-mod 
+=============== 
+ 
+Welcome to the camping mod universal source for minecraft 1.4.6 and 1.4.7. 
+This source is the remake of RikMuld's Camping mods. without the modules, and with much better codes. 
+the public release is about the end of February.  
+ 
+links the the "RikMuld's camping mods" posts on some websites. 
+ 
+[official planet minecraft post] (http://www.minecraftforum.net/topic/1566230-147rikmulds-camping-mods100-pre2ssplansmp-camping-bags-and-radish/) 
+ 
+[official minecraft forum post] (http://www.planetminecraft.com/mod/campfire-mod-campfire-will-be-your-new-better-furnace/) 
+ 
+[official website] (rikmuld.com)  - Contains the downloads. 
+ 
+--------------------------------------------------------------------------------------- 
+ 
+If you already want to have this mod, you can compile it. but expent bugs becous it is untested. 
+search on google how to compile it. 
