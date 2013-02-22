@@ -48,7 +48,12 @@ public class ContainerCampingBagSmall extends Container {
 	@Override
 	public boolean canInteractWith(EntityPlayer player) 
 	{
-		return true;
+		if(player.getCurrentEquippedItem() == null) 
+		{
+			return false;
+		}
+		
+		return player.getCurrentEquippedItem().isItemEqual(thebackpack);
 	}
 
 	public ItemStack transferStackInSlot(EntityPlayer par1EntityPlayer, int slotPos) 

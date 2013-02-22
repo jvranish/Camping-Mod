@@ -1,5 +1,6 @@
 package camping.common.rikmuld.inventory.inventory;
 
+import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.InventoryBasic;
 import net.minecraft.item.ItemStack;
@@ -22,7 +23,7 @@ public class InventoryCampingBagLarge extends InventoryBasic {
 		
 		playerEntity = player;
 		originalIS = is;
-
+		
 		if (!hasInventory(is.getTagCompound())) 
 		{
 			createInventory();
@@ -114,13 +115,13 @@ public class InventoryCampingBagLarge extends InventoryBasic {
 				itemList.appendTag(slotEntry);
 			}
 		}
-
+		
 		NBTTagCompound inventory = new NBTTagCompound();
 		inventory.setTag("Items", itemList);
 		outerTag.setCompoundTag("Inventory", inventory);
 		return outerTag;
 	}
-
+	
 	private void readFromNBT(NBTTagCompound outerTag) 
 	{
 		if (outerTag == null) 
