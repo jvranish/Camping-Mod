@@ -17,9 +17,10 @@ public class GuiCampingBagLarge extends GuiContainer {
 	
 	private InventoryCampingBagLarge backInventory;
 	
-	public GuiCampingBagLarge(InventoryPlayer par1InventoryPlayer,	IInventory iInventory) 
+	public GuiCampingBagLarge(InventoryPlayer par1InventoryPlayer,	InventoryCampingBagLarge iInventory) 
 	{
 		super(new ContainerCampingBagLarge(par1InventoryPlayer, iInventory, null));
+		backInventory = iInventory;
 	}
 
 	@Override
@@ -27,7 +28,7 @@ public class GuiCampingBagLarge extends GuiContainer {
 	{
 		fontRenderer.drawString("Large Camping Bag", 40, 6, 4210752);
 	}
-	
+
 	@Override
 	protected void drawGuiContainerBackgroundLayer(float var1, int var2, int var3) 
 	{

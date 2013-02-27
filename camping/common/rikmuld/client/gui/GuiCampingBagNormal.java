@@ -9,6 +9,7 @@ import org.lwjgl.opengl.GL11;
 import camping.common.rikmuld.core.lib.Textures;
 import camping.common.rikmuld.inventory.container.ContainerCampingBagNormal;
 import camping.common.rikmuld.inventory.inventory.InventoryCampingBagNormal;
+import camping.common.rikmuld.inventory.inventory.InventoryCampingBagSmall;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -17,9 +18,10 @@ public class GuiCampingBagNormal extends GuiContainer {
 	
 	private InventoryCampingBagNormal backInventory;
     
-	public GuiCampingBagNormal(InventoryPlayer par1InventoryPlayer,	IInventory iInventory) 
+	public GuiCampingBagNormal(InventoryPlayer par1InventoryPlayer,	InventoryCampingBagNormal iInventory) 
 	{
 		super(new ContainerCampingBagNormal(par1InventoryPlayer, iInventory, null));
+		backInventory = iInventory;
 	}
 
 	@Override

@@ -1,18 +1,22 @@
 package camping.common.rikmuld.inventory.container;
 
+import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.IInventory;
+import net.minecraft.inventory.InventoryBasic;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
+import camping.common.rikmuld.inventory.inventory.InventoryCampingBagSmall;
 import camping.common.rikmuld.inventory.slot.BackpackSlot;
 import camping.common.rikmuld.item.tool.ToolBackpack;
 
 public class ContainerCampingBagSmall extends Container {
 	
 	private ItemStack thebackpack;
+	private InventoryCampingBagSmall invBack;
 
-	public ContainerCampingBagSmall(IInventory playerInventory, IInventory backpackInventoryS, ItemStack backpack) {
+	public ContainerCampingBagSmall(IInventory playerInventory, InventoryCampingBagSmall backpackInventoryS, ItemStack backpack) {
 
 		int var3;
 		
@@ -41,19 +45,15 @@ public class ContainerCampingBagSmall extends Container {
 		{
 			this.addSlotToContainer(new Slot(playerInventory, var3, 8 + var3 * 18, 142));
 		}
-		
+	
 		thebackpack = backpack;
+		invBack = backpackInventoryS;
 	}
-
+	
 	@Override
 	public boolean canInteractWith(EntityPlayer player) 
 	{
-		if(player.getCurrentEquippedItem() == null) 
-		{
-			return false;
-		}
-		
-		return player.getCurrentEquippedItem().isItemEqual(thebackpack);
+		return true;
 	}
 
 	public ItemStack transferStackInSlot(EntityPlayer par1EntityPlayer, int slotPos) 

@@ -17,9 +17,10 @@ public class GuiCampingBagSmall extends GuiContainer {
 	
 	private InventoryCampingBagSmall backInventory;
     
-	public GuiCampingBagSmall(InventoryPlayer par1InventoryPlayer,	IInventory iInventory) 
+	public GuiCampingBagSmall(InventoryPlayer par1InventoryPlayer,	InventoryCampingBagSmall InventorycampingBagSmall) 
 	{
-		super(new ContainerCampingBagSmall(par1InventoryPlayer, iInventory, null));
+		super(new ContainerCampingBagSmall(par1InventoryPlayer, InventorycampingBagSmall, null));
+		backInventory = InventorycampingBagSmall;
 	}
 
 	@Override
@@ -27,7 +28,7 @@ public class GuiCampingBagSmall extends GuiContainer {
 	{
 		fontRenderer.drawString("Small Camping Bag", 43, 6, 4210752);
 	}
-	
+
 	@Override
 	protected void drawGuiContainerBackgroundLayer(float var1, int var2, int var3) 
 	{
@@ -37,6 +38,7 @@ public class GuiCampingBagSmall extends GuiContainer {
 		int var5 = (this.width - this.xSize) / 2;
 		int var6 = (this.height - this.ySize) / 2;
 		this.drawTexturedModalRect(var5, var6, 0, 0, this.xSize, this.ySize);	
+
 	}
 	
 	protected void keyTyped(char par1, int par2) 
