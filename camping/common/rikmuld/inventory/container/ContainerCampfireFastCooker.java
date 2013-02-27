@@ -115,9 +115,7 @@ public class ContainerCampfireFastCooker extends Container
 
         if (slot != null && slot.getHasStack()) {
             ItemStack itemStack = slot.getStack();
-            if ((itemStack.getItem() instanceof ToolBackpack)) {
-    	        return returnStack;
-            }
+
             returnStack = itemStack.copy();
 
             if (slotPos < 1 * 2) {

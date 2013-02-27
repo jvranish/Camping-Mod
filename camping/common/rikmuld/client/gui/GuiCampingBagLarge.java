@@ -16,7 +16,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class GuiCampingBagLarge extends GuiContainer {
 	
 	private InventoryCampingBagLarge backInventory;
-    
+	
 	public GuiCampingBagLarge(InventoryPlayer par1InventoryPlayer,	IInventory iInventory) 
 	{
 		super(new ContainerCampingBagLarge(par1InventoryPlayer, iInventory, null));
