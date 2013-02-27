@@ -1,5 +1,11 @@
 package camping.common.rikmuld.block;
 
+import net.minecraft.block.Block;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.world.World;
 import camping.common.rikmuld.CampingMod;
 import camping.common.rikmuld.core.lib.Blocks;
 import camping.common.rikmuld.core.lib.Config;
@@ -7,12 +13,6 @@ import camping.common.rikmuld.core.register.ModAchievements;
 import camping.common.rikmuld.core.register.ModBlocks;
 import camping.common.rikmuld.core.register.ModItems;
 import camping.common.rikmuld.tileentity.TileEntityCampfireCheapCooker;
-import net.minecraft.block.Block;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.world.World;
 
 public final class CampfireCheapCooker extends Campfire {
 

@@ -2,9 +2,6 @@ package camping.common.rikmuld.entity;
 
 import java.util.Random;
 
-import camping.common.rikmuld.core.lib.Textures;
-import camping.common.rikmuld.core.proxys.CommonProxy;
-
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityAgeable;
 import net.minecraft.entity.EntityLiving;
@@ -22,6 +19,7 @@ import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.passive.EntityAnimal;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
+import camping.common.rikmuld.core.lib.Textures;
 
 public class Camper extends EntityAnimal{
 

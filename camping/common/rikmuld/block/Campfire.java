@@ -20,7 +20,6 @@ import camping.common.rikmuld.CampingMod;
 import camping.common.rikmuld.client.renderer.particles.Particles;
 import camping.common.rikmuld.core.lib.Blocks;
 import camping.common.rikmuld.core.lib.Config;
-import camping.common.rikmuld.core.proxys.CommonProxy;
 import camping.common.rikmuld.core.register.ModBlocks;
 import camping.common.rikmuld.item.itemblock.ItemCampfireCheapCooker;
 import camping.common.rikmuld.item.itemblock.ItemCampfireFastCooker;

@@ -11,7 +11,6 @@ import camping.common.rikmuld.CampingMod;
 import camping.common.rikmuld.core.lib.Config;
 import camping.common.rikmuld.core.lib.Items;
 import camping.common.rikmuld.core.lib.Textures;
-import camping.common.rikmuld.core.proxys.CommonProxy;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 

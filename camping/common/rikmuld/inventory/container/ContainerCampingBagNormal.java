@@ -6,7 +6,6 @@ import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 import camping.common.rikmuld.inventory.inventory.InventoryCampingBagNormal;
-import camping.common.rikmuld.inventory.inventory.InventoryCampingBagSmall;
 import camping.common.rikmuld.inventory.slot.BackpackSlot;
 import camping.common.rikmuld.item.tool.ToolBackpack;
 

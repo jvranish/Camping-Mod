@@ -2,11 +2,10 @@ package camping.common.rikmuld.world;
 
 import java.util.Random;
 
-import camping.common.rikmuld.core.lib.Config;
-import camping.common.rikmuld.world.structures.CampsiteSimple;
-
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
+import camping.common.rikmuld.core.lib.Config;
+import camping.common.rikmuld.world.structures.CampsiteSimple;
 import cpw.mods.fml.common.IWorldGenerator;
 
 public class WorldGen implements IWorldGenerator {

@@ -2,14 +2,12 @@ package camping.common.rikmuld.client.gui;
 
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.InventoryPlayer;
-import net.minecraft.inventory.IInventory;
 
 import org.lwjgl.opengl.GL11;
 
 import camping.common.rikmuld.core.lib.Textures;
 import camping.common.rikmuld.inventory.container.ContainerCampingBagNormal;
 import camping.common.rikmuld.inventory.inventory.InventoryCampingBagNormal;
-import camping.common.rikmuld.inventory.inventory.InventoryCampingBagSmall;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 

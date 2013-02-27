@@ -3,9 +3,8 @@ package camping.common.rikmuld.core.register;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import cpw.mods.fml.common.FMLLog;
-
 import camping.common.rikmuld.core.lib.ModInfo;
+import cpw.mods.fml.common.FMLLog;
 
 public class ModLogger {
 

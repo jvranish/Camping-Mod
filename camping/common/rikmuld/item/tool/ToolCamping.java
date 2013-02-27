@@ -1,13 +1,8 @@
 package camping.common.rikmuld.item.tool;
 
-import net.minecraft.item.Item;
-import camping.common.rikmuld.CampingMod;
 import camping.common.rikmuld.core.lib.Config;
 import camping.common.rikmuld.core.lib.Items;
-import camping.common.rikmuld.core.proxys.CommonProxy;
 import camping.common.rikmuld.item.CampingItem;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
 public class ToolCamping extends CampingItem {
 

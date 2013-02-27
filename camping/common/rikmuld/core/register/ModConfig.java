@@ -3,14 +3,11 @@ package camping.common.rikmuld.core.register;
 import java.io.File;
 import java.util.logging.Level;
 
-import cpw.mods.fml.common.FMLLog;
-
-import camping.common.rikmuld.core.lib.Blocks;
-import camping.common.rikmuld.core.lib.Items;
-import camping.common.rikmuld.core.lib.Config;
-import camping.common.rikmuld.core.lib.ModInfo;
-
 import net.minecraftforge.common.Configuration;
+import camping.common.rikmuld.core.lib.Blocks;
+import camping.common.rikmuld.core.lib.Config;
+import camping.common.rikmuld.core.lib.Items;
+import camping.common.rikmuld.core.lib.ModInfo;
 
 public class ModConfig {
 

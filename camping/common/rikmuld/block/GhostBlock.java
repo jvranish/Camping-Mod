@@ -9,7 +9,6 @@ import net.minecraft.util.Vec3;
 import net.minecraft.world.World;
 import camping.common.rikmuld.core.lib.Blocks;
 import camping.common.rikmuld.core.lib.Textures;
-import camping.common.rikmuld.core.proxys.CommonProxy;
 
 public class GhostBlock extends Block {
 	

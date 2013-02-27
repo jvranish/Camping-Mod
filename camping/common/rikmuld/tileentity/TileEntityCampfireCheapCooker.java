@@ -1,17 +1,13 @@
 package camping.common.rikmuld.tileentity;
 
 import java.util.Random;
-import java.util.logging.Level;
 
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraftforge.common.ForgeDirection;
-import camping.common.rikmuld.core.lib.Items;
 import camping.common.rikmuld.core.register.ModBlocks;
-import camping.common.rikmuld.core.register.ModLogger;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 

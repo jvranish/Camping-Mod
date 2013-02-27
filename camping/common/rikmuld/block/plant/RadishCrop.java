@@ -12,7 +12,6 @@ import net.minecraftforge.common.ForgeDirection;
 import camping.common.rikmuld.core.lib.Blocks;
 import camping.common.rikmuld.core.lib.Config;
 import camping.common.rikmuld.core.lib.Textures;
-import camping.common.rikmuld.core.proxys.CommonProxy;
 import camping.common.rikmuld.core.register.ModItems;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

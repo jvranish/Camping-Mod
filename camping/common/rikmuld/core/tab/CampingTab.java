@@ -1,8 +1,8 @@
 package camping.common.rikmuld.core.tab;
 
-import camping.common.rikmuld.core.register.ModBlocks;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
+import camping.common.rikmuld.core.register.ModBlocks;
 
 public class CampingTab extends CreativeTabs {
 	

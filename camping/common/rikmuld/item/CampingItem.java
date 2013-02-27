@@ -1,11 +1,10 @@
 package camping.common.rikmuld.item;
 
+import net.minecraft.item.Item;
 import camping.common.rikmuld.CampingMod;
 import camping.common.rikmuld.core.lib.Textures;
-import camping.common.rikmuld.core.proxys.CommonProxy;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import net.minecraft.item.Item;
 
 public class CampingItem extends Item{
 

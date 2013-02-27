@@ -1,10 +1,8 @@
 package camping.common.rikmuld.item.itemblock;
 
 import net.minecraft.item.ItemBlock;
-import net.minecraft.item.ItemStack;
 import camping.common.rikmuld.core.lib.Blocks;
 import camping.common.rikmuld.core.lib.Textures;
-import camping.common.rikmuld.core.proxys.CommonProxy;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 

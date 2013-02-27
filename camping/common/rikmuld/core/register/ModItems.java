@@ -5,7 +5,6 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
-import camping.common.rikmuld.block.plant.RadishCrop;
 import camping.common.rikmuld.core.lib.Config;
 import camping.common.rikmuld.core.lib.Items;
 import camping.common.rikmuld.item.Marshmellow;

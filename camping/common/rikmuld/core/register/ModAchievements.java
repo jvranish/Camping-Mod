@@ -1,11 +1,10 @@
 package camping.common.rikmuld.core.register;
 
-import camping.common.rikmuld.core.lib.ItemStacks;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 import net.minecraft.stats.Achievement;
 import net.minecraftforge.common.AchievementPage;
+import camping.common.rikmuld.core.lib.ItemStacks;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
 public class ModAchievements {

@@ -7,7 +7,6 @@ import org.lwjgl.opengl.GL11;
 
 import camping.common.rikmuld.client.model.ModelCampfire;
 import camping.common.rikmuld.core.lib.Textures;
-import camping.common.rikmuld.core.proxys.CommonProxy;
 import camping.common.rikmuld.tileentity.TileEntityCampfire;
 
 public class TileEntityCampfireRenderer extends TileEntitySpecialRenderer {

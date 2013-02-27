@@ -2,9 +2,6 @@ package camping.common.rikmuld.core.register;
 
 import camping.common.rikmuld.core.lib.Config;
 import camping.common.rikmuld.core.lib.ItemStacks;
-import net.minecraft.block.Block;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ModRecipies {

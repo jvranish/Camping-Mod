@@ -9,7 +9,6 @@ import camping.common.rikmuld.client.model.ModelTentNormal;
 import camping.common.rikmuld.client.model.ModelTentSleeping;
 import camping.common.rikmuld.client.model.ModelTentStorage;
 import camping.common.rikmuld.core.lib.Textures;
-import camping.common.rikmuld.core.proxys.CommonProxy;
 import camping.common.rikmuld.tileentity.TileEntityTent;
 
 public class TileEntityTentRenderer extends TileEntitySpecialRenderer {

@@ -25,7 +25,6 @@ import net.minecraft.util.Vec3;
 import net.minecraft.world.World;
 import camping.common.rikmuld.CampingMod;
 import camping.common.rikmuld.core.lib.Blocks;
-import camping.common.rikmuld.core.proxys.CommonProxy;
 import camping.common.rikmuld.core.register.ModAchievements;
 import camping.common.rikmuld.core.register.ModBlocks;
 import camping.common.rikmuld.core.register.ModItems;

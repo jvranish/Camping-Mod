@@ -10,8 +10,6 @@ import net.minecraft.inventory.Slot;
 import net.minecraft.inventory.SlotFurnace;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
-import net.minecraft.tileentity.TileEntityFurnace;
-import camping.common.rikmuld.item.tool.ToolBackpack;
 import camping.common.rikmuld.tileentity.TileEntityCampfireCheapCooker;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
