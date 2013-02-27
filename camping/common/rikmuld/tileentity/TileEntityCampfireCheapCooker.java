@@ -1,13 +1,17 @@
 package camping.common.rikmuld.tileentity;
 
 import java.util.Random;
+import java.util.logging.Level;
 
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraftforge.common.ForgeDirection;
+import camping.common.rikmuld.core.lib.Items;
 import camping.common.rikmuld.core.register.ModBlocks;
+import camping.common.rikmuld.core.register.ModLogger;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -230,34 +234,39 @@ public final class TileEntityCampfireCheapCooker extends TileEntityCampfire{
 
     private boolean canSmelt()
     {
-    	if (this.campfireItemStacks[0] !=  null);
+    	if (this.campfireItemStacks[0] !=  null||this.campfireItemStacks[1] !=  null)
     	{
-    		if (this.campfireItemStacks[1] !=  null);
-    		{
+			if (this.campfireItemStacks[0] !=  null)
+			{
+				ItemStack var1 = FurnaceRecipes.smelting().getSmeltingResult(this.campfireItemStacks[0]);
+				if (var1 == null) return false;
+			}
+			
+			if (this.campfireItemStacks[1] !=  null)
+			{   		
+				ItemStack var1 = FurnaceRecipes.smelting().getSmeltingResult(this.campfireItemStacks[1]);
+	            if (var1 == null) return false;
+			}
+			
+			if (this.campfireItemStacks[0] !=  null)
+			{   			
+				ItemStack var1 = FurnaceRecipes.smelting().getSmeltingResult(this.campfireItemStacks[0]);
+				if (this.campfireItemStacks[2] == null) return true;
+				if (!this.campfireItemStacks[2].isItemEqual(var1)) return false;
+				int result = campfireItemStacks[2].stackSize + var1.stackSize;
+				return (result <= getInventoryStackLimit() && result <= var1.getMaxStackSize());
+			}
 
-    			if (this.campfireItemStacks[0] !=  null)
-    			{
-    				ItemStack var1 = FurnaceRecipes.smelting().getSmeltingResult(this.campfireItemStacks[0]);
-    				if (var1 == null) return false;
-    				if (this.campfireItemStacks[2] == null) return true;
-    				if (!this.campfireItemStacks[2].isItemEqual(var1)) return false;
-    				int result = campfireItemStacks[2].stackSize + var1.stackSize;
-    				return (result <= getInventoryStackLimit() && result <= var1.getMaxStackSize());
-    			}
-
-    			if (this.campfireItemStacks[1] !=  null)
-    			{   		
-    				ItemStack var1 = FurnaceRecipes.smelting().getSmeltingResult(this.campfireItemStacks[1]);
-		            if (var1 == null) return false;
-		            if (this.campfireItemStacks[3] == null) return true;
-		            if (!this.campfireItemStacks[3].isItemEqual(var1)) return false;
-		            int result = campfireItemStacks[3].stackSize + var1.stackSize;
-		            return (result <= getInventoryStackLimit() && result <= var1.getMaxStackSize());		       
-    			}
-
-    	else return false;
-    		}
-    	}			
+			if (this.campfireItemStacks[1] !=  null)
+			{ 
+				ItemStack var1 = FurnaceRecipes.smelting().getSmeltingResult(this.campfireItemStacks[1]);
+	            if (this.campfireItemStacks[3] == null) return true;
+	            if (!this.campfireItemStacks[3].isItemEqual(var1)) return false;
+	            int result = campfireItemStacks[3].stackSize + var1.stackSize;
+	            return (result <= getInventoryStackLimit() && result <= var1.getMaxStackSize());		       
+			}	
+    	}
+    	return false;
     }
 
     public void smeltItem()
@@ -266,7 +275,7 @@ public final class TileEntityCampfireCheapCooker extends TileEntityCampfire{
         {
             ItemStack var1 = FurnaceRecipes.smelting().getSmeltingResult(this.campfireItemStacks[0]);
             ItemStack var2 = FurnaceRecipes.smelting().getSmeltingResult(this.campfireItemStacks[1]);
-
+            
             if (this.campfireItemStacks[0] !=  null)
             {   
             	int change = generator.nextInt(100) + 1;
@@ -306,6 +315,7 @@ public final class TileEntityCampfireCheapCooker extends TileEntityCampfire{
                     this.campfireItemStacks[0] = null;
                 }	  
             }
+        
 
             if (this.campfireItemStacks[1] !=  null)
             {   
@@ -348,6 +358,7 @@ public final class TileEntityCampfireCheapCooker extends TileEntityCampfire{
             }	
         }
     }
+    
     
     @Override
 	public int getStartInventorySide(ForgeDirection side) 

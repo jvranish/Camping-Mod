@@ -1,12 +1,15 @@
 package camping.common.rikmuld.tileentity;
 
 
+import java.util.logging.Level;
+
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraftforge.common.ForgeDirection;
 import camping.common.rikmuld.core.register.ModBlocks;
+import camping.common.rikmuld.core.register.ModLogger;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -229,94 +232,99 @@ public final class TileEntityCampfireMultiCooker extends TileEntityCampfire
 
     private boolean canSmelt()
     {
-		if (this.campfireItemStacks[0] !=  null);
+		if (this.campfireItemStacks[0] !=  null||this.campfireItemStacks[1] !=  null||this.campfireItemStacks[2] !=  null||this.campfireItemStacks[3] !=  null||this.campfireItemStacks[4] !=  null|this.campfireItemStacks[5] !=  null)
 		{
-			if (this.campfireItemStacks[1] !=  null);
-			{
-				if (this.campfireItemStacks[2] !=  null);
-				{
-					if (this.campfireItemStacks[3] !=  null);
-					{
-						if (this.campfireItemStacks[4] !=  null);
-						{
-							if (this.campfireItemStacks[5] !=  null);
-							{
+			if (this.campfireItemStacks[0] !=  null)
+	    	{
+	            ItemStack var1 = FurnaceRecipes.smelting().getSmeltingResult(this.campfireItemStacks[0]);
+	            if (var1 == null) return false;
+	    	}
+			
+			if (this.campfireItemStacks[1] !=  null)
+	    	{
+	    		ItemStack var1 = FurnaceRecipes.smelting().getSmeltingResult(this.campfireItemStacks[1]);
+	            if (var1 == null) return false;
+	        }
+			
+			if (this.campfireItemStacks[2] !=  null)
+	    	{
+	    		ItemStack var1 = FurnaceRecipes.smelting().getSmeltingResult(this.campfireItemStacks[2]);
+	            if (var1 == null) return false;	          
+	        }			
+			
+	    	if (this.campfireItemStacks[3] !=  null)
+	    	{
+	    		ItemStack var1 = FurnaceRecipes.smelting().getSmeltingResult(this.campfireItemStacks[3]);
+	            if (var1 == null) return false;	      
+	    	}
+	    	
+	    	if (this.campfireItemStacks[4] !=  null)
+	    	{
+	    		ItemStack var1 = FurnaceRecipes.smelting().getSmeltingResult(this.campfireItemStacks[4]);
+	            if (var1 == null) return false;	          
+	    	}
 
-						    	if (this.campfireItemStacks[0] !=  null)
-						    	{
+			if (this.campfireItemStacks[5] !=  null)
+	    	{
+	    		ItemStack var1 = FurnaceRecipes.smelting().getSmeltingResult(this.campfireItemStacks[5]);
+	    		if (var1 == null) return false;
+	    	}
+			
+	    	if (this.campfireItemStacks[0] !=  null)
+	    	{
+	            ItemStack var1 = FurnaceRecipes.smelting().getSmeltingResult(this.campfireItemStacks[0]);
+	            if (this.campfireItemStacks[7] == null) return true;
+	            if (!this.campfireItemStacks[7].isItemEqual(var1)) return false;
+	            int result = campfireItemStacks[7].stackSize + var1.stackSize;
+	            return (result <= getInventoryStackLimit() && result <= var1.getMaxStackSize());
+	        }
+    	
+	    	if (this.campfireItemStacks[1] !=  null)
+	    	{
+	    		ItemStack var1 = FurnaceRecipes.smelting().getSmeltingResult(this.campfireItemStacks[1]);
+	            if (this.campfireItemStacks[8] == null) return true;
+	            if (!this.campfireItemStacks[8].isItemEqual(var1)) return false;
+	            int result = campfireItemStacks[8].stackSize + var1.stackSize;
+	            return (result <= getInventoryStackLimit() && result <= var1.getMaxStackSize());
+	        }
+	    	
+	     	if (this.campfireItemStacks[2] !=  null)
+	    	{
+	    		ItemStack var1 = FurnaceRecipes.smelting().getSmeltingResult(this.campfireItemStacks[2]);
+	            if (this.campfireItemStacks[9] == null) return true;
+	            if (!this.campfireItemStacks[9].isItemEqual(var1)) return false;
+	            int result = campfireItemStacks[9].stackSize + var1.stackSize;
+	            return (result <= getInventoryStackLimit() && result <= var1.getMaxStackSize());
+	        }
+	     	
+	    	if (this.campfireItemStacks[3] !=  null)
+	    	{
+	    		ItemStack var1 = FurnaceRecipes.smelting().getSmeltingResult(this.campfireItemStacks[3]);
+	            if (this.campfireItemStacks[10] == null) return true;
+	            if (!this.campfireItemStacks[10].isItemEqual(var1)) return false;
+	            int result = campfireItemStacks[10].stackSize + var1.stackSize;
+	            return (result <= getInventoryStackLimit() && result <= var1.getMaxStackSize());
+	    	}
 
-						            ItemStack var1 = FurnaceRecipes.smelting().getSmeltingResult(this.campfireItemStacks[0]);
-						            if (var1 == null) return false;
-						            if (this.campfireItemStacks[7] == null) return true;
-						            if (!this.campfireItemStacks[7].isItemEqual(var1)) return false;
-						            int result = campfireItemStacks[7].stackSize + var1.stackSize;
-						            return (result <= getInventoryStackLimit() && result <= var1.getMaxStackSize());
-
-						        }
-
-						    	if (this.campfireItemStacks[1] !=  null)
-						    	{
-
-						    		ItemStack var1 = FurnaceRecipes.smelting().getSmeltingResult(this.campfireItemStacks[1]);
-						            if (var1 == null) return false;
-						            if (this.campfireItemStacks[8] == null) return true;
-						            if (!this.campfireItemStacks[8].isItemEqual(var1)) return false;
-						            int result = campfireItemStacks[8].stackSize + var1.stackSize;
-						            return (result <= getInventoryStackLimit() && result <= var1.getMaxStackSize());
-
-						        }
-
-						    	if (this.campfireItemStacks[2] !=  null)
-						    	{
-
-						    		ItemStack var1 = FurnaceRecipes.smelting().getSmeltingResult(this.campfireItemStacks[2]);
-						            if (var1 == null) return false;
-						            if (this.campfireItemStacks[9] == null) return true;
-						            if (!this.campfireItemStacks[9].isItemEqual(var1)) return false;
-						            int result = campfireItemStacks[9].stackSize + var1.stackSize;
-						            return (result <= getInventoryStackLimit() && result <= var1.getMaxStackSize());
-						        }
-
-						    	if (this.campfireItemStacks[3] !=  null)
-						    	{
-
-						    		ItemStack var1 = FurnaceRecipes.smelting().getSmeltingResult(this.campfireItemStacks[3]);
-						            if (var1 == null) return false;
-						            if (this.campfireItemStacks[10] == null) return true;
-						            if (!this.campfireItemStacks[10].isItemEqual(var1)) return false;
-						            int result = campfireItemStacks[10].stackSize + var1.stackSize;
-						            return (result <= getInventoryStackLimit() && result <= var1.getMaxStackSize());
-						    	}
-
-						    	if (this.campfireItemStacks[4] !=  null)
-						    	{
-
-						    		ItemStack var1 = FurnaceRecipes.smelting().getSmeltingResult(this.campfireItemStacks[4]);
-						            if (var1 == null) return false;
-						            if (this.campfireItemStacks[11] == null) return true;
-						            if (!this.campfireItemStacks[11].isItemEqual(var1)) return false;
-						            int result = campfireItemStacks[11].stackSize + var1.stackSize;
-						            return (result <= getInventoryStackLimit() && result <= var1.getMaxStackSize());
-						    	}
-
-						    	if (this.campfireItemStacks[5] !=  null)
-						    	{
-
-						    		ItemStack var1 = FurnaceRecipes.smelting().getSmeltingResult(this.campfireItemStacks[5]);
-						    		if (var1 == null) return false;
-						    	if (this.campfireItemStacks[12] == null) return true;
-						    	if (!this.campfireItemStacks[12].isItemEqual(var1)) return false;
-						    	int result = campfireItemStacks[12].stackSize + var1.stackSize;
-						    	return (result <= getInventoryStackLimit() && result <= var1.getMaxStackSize());
-						    	}
-
-						     else return false;
-							}
-						}
-					}
-				}
-			}
-		}	
+	      	if (this.campfireItemStacks[4] !=  null)
+	    	{
+	    		ItemStack var1 = FurnaceRecipes.smelting().getSmeltingResult(this.campfireItemStacks[4]);
+	            if (this.campfireItemStacks[11] == null) return true;
+	            if (!this.campfireItemStacks[11].isItemEqual(var1)) return false;
+	            int result = campfireItemStacks[11].stackSize + var1.stackSize;
+	            return (result <= getInventoryStackLimit() && result <= var1.getMaxStackSize());
+	    	}
+	    	
+	    	if (this.campfireItemStacks[5] !=  null)
+	    	{
+	    		ItemStack var1 = FurnaceRecipes.smelting().getSmeltingResult(this.campfireItemStacks[5]);
+		    	if (this.campfireItemStacks[12] == null) return true;
+		    	if (!this.campfireItemStacks[12].isItemEqual(var1)) return false;
+		    	int result = campfireItemStacks[12].stackSize + var1.stackSize;
+		    	return (result <= getInventoryStackLimit() && result <= var1.getMaxStackSize());
+	    	}
+		}
+		return false;
 	}
 
     public void smeltItem()
@@ -330,6 +338,7 @@ public final class TileEntityCampfireMultiCooker extends TileEntityCampfire
             ItemStack var5 = FurnaceRecipes.smelting().getSmeltingResult(this.campfireItemStacks[4]);
             ItemStack var6 = FurnaceRecipes.smelting().getSmeltingResult(this.campfireItemStacks[5]);
 
+           
             if (this.campfireItemStacks[0] !=  null)
             {	        	          
 		        if (this.campfireItemStacks[7] == null)
@@ -349,7 +358,7 @@ public final class TileEntityCampfireMultiCooker extends TileEntityCampfire
 		            this.campfireItemStacks[0] = null;
 		        }
             }
-
+           
             if (this.campfireItemStacks[1] !=  null)
             {             
                 if (this.campfireItemStacks[8] == null)
@@ -369,7 +378,7 @@ public final class TileEntityCampfireMultiCooker extends TileEntityCampfire
                     this.campfireItemStacks[1] = null;
                 }
             }
-
+   
 	        if (this.campfireItemStacks[2] !=  null)
 	        {
 		        if (this.campfireItemStacks[9] == null)
@@ -389,7 +398,7 @@ public final class TileEntityCampfireMultiCooker extends TileEntityCampfire
 		            this.campfireItemStacks[2] = null;
 		        }
 	        }
-
+    
 	    	if (this.campfireItemStacks[3] !=  null)
 	    	{  		
 			  if (this.campfireItemStacks[10] == null)
@@ -409,7 +418,7 @@ public final class TileEntityCampfireMultiCooker extends TileEntityCampfire
 		          this.campfireItemStacks[3] = null;
 		      }
 	    	}
-
+   
 	    	if (this.campfireItemStacks[4] !=  null)
 	    	{    		
 	      	    if (this.campfireItemStacks[11] == null)
@@ -429,7 +438,7 @@ public final class TileEntityCampfireMultiCooker extends TileEntityCampfire
 	                this.campfireItemStacks[4] = null;
 	            }
 	      	}
-
+		    	
 	    	if (this.campfireItemStacks[5] !=  null)
 	    	{
 
@@ -448,8 +457,8 @@ public final class TileEntityCampfireMultiCooker extends TileEntityCampfire
 	            {
 	                this.campfireItemStacks[5] = null;
 	            }
-	    	}
-        }
+		    }
+        }         
     }
     
     @Override
