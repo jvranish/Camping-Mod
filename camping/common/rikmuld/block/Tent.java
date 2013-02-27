@@ -615,7 +615,7 @@ public class Tent extends BlockContainer {
 				
 				if (BID!=ModBlocks.ghostBlock.blockID)
 				{			
-					if (BID!=8&&BID!=9&&BID!=10&&BID!=11&&BID!=31&&BID!=78)
+					if (BID!=8&&BID!=9&&BID!=10&&BID!=11&&BID!=31&&BID!=78&&BID!=26)
 					{
 						if (BID!=0)
 						{
@@ -658,7 +658,7 @@ public class Tent extends BlockContainer {
 				
 				if (BID!=ModBlocks.ghostBlock.blockID)
 				{			
-					if (BID!=8&&BID!=9&&BID!=10&&BID!=11&&BID!=31&&BID!=78)
+					if (BID!=8&&BID!=9&&BID!=10&&BID!=11&&BID!=31&&BID!=78&&BID!=26)
 					{
 						if (BID!=0)
 						{
