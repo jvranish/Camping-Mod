@@ -5,6 +5,7 @@ import java.util.logging.Level;
 
 import net.minecraft.creativetab.CreativeTabs;
 import camping.common.rikmuld.core.handlers.CraftHandler;
+import camping.common.rikmuld.core.helper.CheckVersion;
 import camping.common.rikmuld.core.lib.ModInfo;
 import camping.common.rikmuld.core.proxys.CommonProxy;
 import camping.common.rikmuld.core.register.ModAchievements;
@@ -48,6 +49,7 @@ public class CampingMod {
 	public void preInit(FMLPreInitializationEvent event)
 	{
 		ModLogger.preinit();
+		CheckVersion.CheckNewestVersion();
 		ModConfig.preInit(new File(event.getModConfigurationDirectory().getAbsolutePath() + "\\Camping\\" + ModInfo.MOD_ID + ".cfg"));
 	}
 	
