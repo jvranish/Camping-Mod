@@ -609,7 +609,7 @@ public class Tent extends BlockContainer {
 			}
 	
 			for(int x=0;x<xNoRoalteTent.length;x++)
-			{			
+			{
 				MID = par1World.getBlockMetadata(par2+xNoRoalteTent[x], par3+yNoRoalteTent[x], par4+zNoRoalteTent[x]);
 				BID = par1World.getBlockId(par2+xNoRoalteTent[x], par3+yNoRoalteTent[x], par4+zNoRoalteTent[x]);
 				
@@ -718,7 +718,7 @@ public class Tent extends BlockContainer {
 			} 
 			else 
 			{
-				this.DestroyTent(world, x, y, z);		
+				this.DestroyTent(world, x, y, z);	
 				this.dropBlockAsItem_do(world, x, y, z, new ItemStack(ModBlocks.tent.blockID, 1, 0));
 			}
 		}

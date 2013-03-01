@@ -3,6 +3,7 @@ package camping.common.rikmuld.world.structures;
 import java.util.Random;
 
 import net.minecraft.block.Block;
+import net.minecraft.client.Minecraft;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.feature.WorldGenerator;
@@ -12,6 +13,7 @@ import camping.common.rikmuld.entity.Camper;
 
 public class CampsiteSimple extends WorldGenerator {
 	
+	public static Minecraft mc;
     Random generator = new Random();
     int randomcamp = generator.nextInt(100) + 1;
     int RandomCampfire = 0;
@@ -67,8 +69,7 @@ public class CampsiteSimple extends WorldGenerator {
     }
     
 	public boolean generate(World world, Random rand, int i, int j, int k) 
-	{
-	
+	{		
 		if ((world.getBiomeGenForCoords(i, k)==BiomeGenBase.forest||world.getBiomeGenForCoords(i, k)==BiomeGenBase.plains)&&Config.WORLD_GEN_SMALL_CAMP_CANT_SPAWN_ANYWERE)
 		{
 			int BlockUp = world.getBlockId(i,j+1,k);
