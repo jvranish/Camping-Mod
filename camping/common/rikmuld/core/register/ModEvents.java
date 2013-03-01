@@ -1,5 +1,6 @@
 package camping.common.rikmuld.core.register;
 
+import camping.common.rikmuld.block.plant.RadishCrop;
 import camping.common.rikmuld.core.helper.CheckVersion;
 import net.minecraft.client.Minecraft;
 import net.minecraft.src.ModLoader;
@@ -29,4 +30,17 @@ public class ModEvents {
 			FirstTime = false;
 		}
 	}
+	
+	@ForgeSubscribe
+    public void onUseBonemeal(BonemealEvent event)
+    {
+            if (event.ID == ModBlocks.RadishCrop.blockID)
+            {
+                    if (!event.world.isRemote)
+                    {
+                            ((RadishCrop)ModBlocks.RadishCrop).Grow(event.world, event.X, event.Y, event.Z, event.entityPlayer);
+                    }
+            }
+
+    }
 }

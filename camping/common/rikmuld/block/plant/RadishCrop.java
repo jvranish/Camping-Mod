@@ -59,7 +59,7 @@ public class RadishCrop extends BlockFlower {
 	        }
 	    }
 
-	    public boolean onBlockActivated(World par1World, int par2, int par3, int par4, EntityPlayer player, int par6, float par7, float par8, float par9)
+	    public boolean Grow(World par1World, int par2, int par3, int par4, EntityPlayer player)
 	    {
 
 	    	int var6 = par1World.getBlockMetadata(par2, par3, par4);
@@ -67,15 +67,9 @@ public class RadishCrop extends BlockFlower {
 				
 			if (var6!=7)
 			{
-				if (currentitem != null)
-				{
-					if (currentitem.itemID == Item.dyePowder.itemID&&currentitem.getItemDamage()==15)
-					{
-						par1World.setBlockMetadataWithNotify(par2, par3, par4, 7);
-						currentitem.stackSize--;
-						return true;
-					}
-				}
+				par1World.setBlockMetadataWithNotify(par2, par3, par4, 7);
+				currentitem.stackSize--;
+				return true;
 			}
 			return true;
 	    }
