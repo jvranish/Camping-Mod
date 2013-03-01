@@ -39,4 +39,5 @@ public class Blocks {
 	public static int BLOCK_TENT_ID;
 	public static int BLOCK_GHOST_ID;
 	public static int BLOCK_RADISH_ID;
+
 }

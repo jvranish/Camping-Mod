@@ -11,6 +11,7 @@ import camping.common.rikmuld.core.proxys.CommonProxy;
 import camping.common.rikmuld.core.register.ModAchievements;
 import camping.common.rikmuld.core.register.ModBlocks;
 import camping.common.rikmuld.core.register.ModConfig;
+import camping.common.rikmuld.core.register.ModEvents;
 import camping.common.rikmuld.core.register.ModItems;
 import camping.common.rikmuld.core.register.ModLogger;
 import camping.common.rikmuld.core.register.ModMobs;
@@ -49,7 +50,6 @@ public class CampingMod {
 	public void preInit(FMLPreInitializationEvent event)
 	{
 		ModLogger.preinit();
-		CheckVersion.CheckNewestVersion();
 		ModConfig.preInit(new File(event.getModConfigurationDirectory().getAbsolutePath() + "\\Camping\\" + ModInfo.MOD_ID + ".cfg"));
 	}
 	
@@ -67,6 +67,7 @@ public class CampingMod {
 		ModRecipies.init();
 		ModAchievements.init();
 		ModMobs.init();
+		ModEvents.init();
 		
 		GameRegistry.registerCraftingHandler(new CraftHandler());
 		GameRegistry.registerWorldGenerator(new WorldGen());	

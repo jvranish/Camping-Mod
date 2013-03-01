@@ -1,5 +1,6 @@
 package camping.common.rikmuld.core.helper;
 
+import java.awt.Color;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -16,19 +17,25 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
+import net.minecraft.client.Minecraft;
+import net.minecraft.server.MinecraftServer;
+import net.minecraft.src.ModLoader;
+
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
+import camping.common.rikmuld.core.lib.Colors;
 import camping.common.rikmuld.core.lib.ModInfo;
 import camping.common.rikmuld.core.register.ModLogger;
 
 
 public class CheckVersion {
 	
-	public static final String MOD_MESSAGE_VERSION_NEW = "There is an Updated version off the camping mod. Version:";
-	public static final String MOD_MESSAGE_VERSION_GOOD = "You have the latest version off the camping mod";
+	public static final String MOD_MESSAGE_VERSION_NEW = "There is an Updated version off the camping mod";
+	public static final String MOD_MESSAGE_VERSION_VERSION = "Version: ";
+	public static final String MOD_MESSAGE_VERSION_GOOD = "Your camping mod is up to date";
 	public static final String MOD_MESSAGE_VERSION_DATE = "The version came out at: ";
 	public static final String MOD_MESSAGE_VERSION_WHATSNEW = "The new version mainly includes: ";
 	public static final String MOD_MESSAGE_VERSION_CURR = "Your version is: ";
@@ -39,6 +46,7 @@ public class CheckVersion {
 	static DocumentBuilder builder;
 	static Document doc;
 	static Transformer xform;
+	static Minecraft mc;
 	
 	public static void GetXmlFile()
 	{
@@ -88,30 +96,38 @@ public class CheckVersion {
 	public static void CheckNewestVersion()
 	{
 		GetXmlFile();
-		
-		NodeList Version = doc.getElementsByTagName("VersionNumber");
-		NodeList VersionDate = doc.getElementsByTagName("VersionDate");
-		NodeList VersionNew = doc.getElementsByTagName("NewInVersion");
-		
-		Node NewestVersion = Version.item(0);
-		Node NewestVersionDate = VersionDate.item(0);
-		Node NewestVersionNew = VersionNew.item(0);
-		
-		String NewVersion = NewestVersion.getTextContent();
-		String NewVersionDate = NewestVersionDate.getTextContent();
-		String NewVersionNew = NewestVersionNew.getTextContent();
-		
-		if(NewVersion.equals(ModInfo.MOD_VERSION))
+		if(doc!=null)
 		{
-			ModLogger.log(Level.INFO,(MOD_MESSAGE_VERSION_GOOD));
+			NodeList Version = doc.getElementsByTagName("VersionNumber");
+			NodeList VersionDate = doc.getElementsByTagName("VersionDate");
+			NodeList VersionNew = doc.getElementsByTagName("NewInVersion");
 			
+			Node NewestVersion = Version.item(0);
+			Node NewestVersionDate = VersionDate.item(0);
+			Node NewestVersionNew = VersionNew.item(0);
+			
+			String NewVersion = NewestVersion.getTextContent();
+			String NewVersionDate = NewestVersionDate.getTextContent();
+			String NewVersionNew = NewestVersionNew.getTextContent();
+
+			if(!MinecraftServer.getServer().isDedicatedServer())
+			{
+				if(ModLoader.getMinecraftInstance().thePlayer!=null)
+				{
+					if(!NewVersion.equals(ModInfo.MOD_VERSION))
+					{
+						ModLoader.getMinecraftInstance().thePlayer.addChatMessage(Colors.COLOR_RED+MOD_MESSAGE_VERSION_NEW);
+						ModLoader.getMinecraftInstance().thePlayer.addChatMessage(Colors.COLOR_RED+MOD_MESSAGE_VERSION_VERSION + NewVersion); 
+						ModLoader.getMinecraftInstance().thePlayer.addChatMessage(Colors.COLOR_RED+MOD_MESSAGE_VERSION_CURR + ModInfo.MOD_VERSION);
+						ModLoader.getMinecraftInstance().thePlayer.addChatMessage(Colors.COLOR_RED+MOD_MESSAGE_VERSION_WHATSNEW + NewVersionNew);
+						ModLoader.getMinecraftInstance().thePlayer.addChatMessage(Colors.COLOR_RED+MOD_MESSAGE_VERSION_DATE + NewVersionDate);
+					}
+					else
+					{
+						ModLoader.getMinecraftInstance().thePlayer.addChatMessage(Colors.COLOR_GREEN_LIGHT+MOD_MESSAGE_VERSION_GOOD);
+					}
+				}
+			}
 		}
-		else 
-		{
-			ModLogger.log(Level.INFO,(MOD_MESSAGE_VERSION_NEW + NewVersion));
-			ModLogger.log(Level.INFO,(MOD_MESSAGE_VERSION_CURR + ModInfo.MOD_VERSION));
-			ModLogger.log(Level.INFO,(MOD_MESSAGE_VERSION_WHATSNEW + NewVersionNew));
-		}
-		ModLogger.log(Level.INFO,(MOD_MESSAGE_VERSION_DATE + NewVersionDate));
 	}
 }
