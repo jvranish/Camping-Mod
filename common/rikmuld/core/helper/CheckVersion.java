@@ -102,9 +102,9 @@ public class CheckVersion {
 			String NewVersionDate = NewestVersionDate.getTextContent();
 			String NewVersionNew = NewestVersionNew.getTextContent();
 
-			if(!MinecraftServer.getServer().isDedicatedServer())
+			if(!MinecraftServer.getServer().isDedicatedServer()&&ModLoader.getMinecraftInstance().thePlayer!=null)
 			{
-				if(ModLoader.getMinecraftInstance().thePlayer!=null&&!NewVersion.equals(ModInfo.MOD_VERSION))
+				if(!NewVersion.equals(ModInfo.MOD_VERSION))
 				{	
 					ModLoader.getMinecraftInstance().thePlayer.addChatMessage(Colors.COLOR_RED+MOD_MESSAGE_VERSION_NEW);
 					ModLoader.getMinecraftInstance().thePlayer.addChatMessage(Colors.COLOR_RED+MOD_MESSAGE_VERSION_VERSION + NewVersion); 
