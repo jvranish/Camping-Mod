@@ -57,7 +57,7 @@ public class ContainerCampfireCheapCooker extends Container
     {
         super.detectAndSendChanges();
         
-        Iterator var1 = this.crafters.iterator();
+        Iterator<?> var1 = this.crafters.iterator();
 
         while (var1.hasNext())
         {

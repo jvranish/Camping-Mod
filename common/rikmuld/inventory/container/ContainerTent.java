@@ -10,9 +10,6 @@ import rikmuld.tileentity.TileEntityTent;
 public class ContainerTent extends Container {
 	
 	private TileEntityTent campfire;
-	private int lastCookTime = 0;
-	private int lastBurnTime = 0;
-	private int lastItemBurnTime = 0;
 
 	public ContainerTent(InventoryPlayer par1InventoryPlayer, TileEntityTent par2TileEntitycampfire) 
 	{

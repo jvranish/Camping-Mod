@@ -32,29 +32,26 @@ public class GuideBook extends CampingItem{
 	
 	@Override
 	public ItemStack onItemRightClick(ItemStack stack, World par2World, EntityPlayer par3EntityPlayer)
-    {
-        switch (stack.getItemDamage())
+    {	
+        if(stack.getItemDamage()==0)
         {
-	        case 0:
-	        {
-	        	par3EntityPlayer.openGui(CampingMod.instance, GuiIds.GUIGuideCampfire, par2World,  0, 0, 0);
-	        }
-	        case 1:
-	        {
-	        	par3EntityPlayer.openGui(CampingMod.instance, GuiIds.GUIGuideTent, par2World,  0, 0, 0);
-	        }
-	        case 2:
-	        {
-	        	par3EntityPlayer.openGui(CampingMod.instance, GuiIds.GUIGuideEquipment, par2World,  0, 0, 0);
-	        }
-	        case 3:
-	        {
-	        	par3EntityPlayer.openGui(CampingMod.instance, GuiIds.GUIGuideFood, par2World,  0, 0, 0);
-	        }
-	        case 4:
-	        {
-	        	par3EntityPlayer.openGui(CampingMod.instance, GuiIds.GUIGuideWorld, par2World,  0, 0, 0);
-	        }
+        	par3EntityPlayer.openGui(CampingMod.instance, GuiIds.GUIGuideCampfire, par2World,  0, 0, 0);
+        }
+        if(stack.getItemDamage()==1)
+        {
+        	par3EntityPlayer.openGui(CampingMod.instance, GuiIds.GUIGuideTent, par2World,  0, 0, 0);
+        }
+        if(stack.getItemDamage()==2)
+        {
+        	par3EntityPlayer.openGui(CampingMod.instance, GuiIds.GUIGuideEquipment, par2World,  0, 0, 0);
+        }
+        if(stack.getItemDamage()==3)
+        {
+        	par3EntityPlayer.openGui(CampingMod.instance, GuiIds.GUIGuideFood, par2World,  0, 0, 0);
+        }
+        if(stack.getItemDamage()==4)
+        {
+        	par3EntityPlayer.openGui(CampingMod.instance, GuiIds.GUIGuideWorld, par2World,  0, 0, 0);
         }
         return stack;
     }

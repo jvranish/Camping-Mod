@@ -11,9 +11,6 @@ import rikmuld.item.tool.ToolBackpack;
 
 public class ContainerCampingBagNormal extends Container {
 	
-	private ItemStack thebackpack;
-	private InventoryCampingBagNormal invBack;
-	
 	public ContainerCampingBagNormal(IInventory playerInventory, InventoryCampingBagNormal backpackInventoryM, ItemStack backpack) {
 
 		int var3;
@@ -51,9 +48,6 @@ public class ContainerCampingBagNormal extends Container {
 		{
 			this.addSlotToContainer(new Slot(playerInventory, var3, 8 + var3 * 18, 142));
 		}
-		
-		thebackpack = backpack;
-		invBack = backpackInventoryM;
 	}
 
 	@Override

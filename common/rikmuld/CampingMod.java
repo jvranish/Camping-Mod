@@ -57,7 +57,7 @@ public class CampingMod {
 	{
 		proxy.registerRenderers();
 		
-		NetworkRegistry.instance().registerGuiHandler(this, this.proxy);	
+		NetworkRegistry.instance().registerGuiHandler(this, CampingMod.proxy);	
 		LanguageRegistry.instance().addStringLocalization("itemGroup.customTab", "en_US", "Camping Stuff");
 		
 		ModBlocks.init();
