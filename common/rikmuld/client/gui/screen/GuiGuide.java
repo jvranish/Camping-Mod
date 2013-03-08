@@ -5,6 +5,7 @@ import net.minecraft.client.gui.GuiScreen;
 
 import org.lwjgl.opengl.GL11;
 
+import rikmuld.client.gui.button.GuiButtonUniversalSprite;
 import rikmuld.client.gui.button.GuiButtonGuidePage;
 import rikmuld.core.lib.Textures;
 
@@ -16,21 +17,29 @@ public class GuiGuide extends GuiScreen{
     private GuiButtonGuidePage buttonPreviousPage;
     private int BookPages;
     private int BookPagesTotaal = 15;
-    
-	public GuiGuide()
-	{
-		
-	}
+    private GuiButtonUniversalSprite buttonIcon;
 
 	public void initGui()
 	{
 		controlList.clear();
+	    addButtonByPage(BookPages);
 		int var1 = (this.width - this.bookImageWidth) / 2;
 		int var2 = (this.height - this.bookImageHeight) / 2;
         this.controlList.add(this.buttonNextPage = new GuiButtonGuidePage(0, var1 + 132, var2 + 140, true));
         this.controlList.add(this.buttonPreviousPage = new GuiButtonGuidePage(1, var1 + 26, var2 + 140, false));
 	}
 	
+	private void addImgByPage(int page) 
+	{
+		if(page==0)
+		{
+			this.drawTexturedModalRect(((this.width - this.bookImageWidth) / 2)+22, ((this.height - this.bookImageHeight) / 2)+11, 0, 240, 136, 15);
+		}
+	}
+
+	private void addButtonByPage(int page) {}
+	private void addTextByPage(int page) {}
+
 	@Override
 	public void actionPerformed(GuiButton button)
 	{
@@ -57,6 +66,8 @@ public class GuiGuide extends GuiScreen{
 		 int var1 = (this.width - this.bookImageWidth) / 2;
 		 int var2 = (this.height - this.bookImageHeight) / 2;
 		 int var3 = 0;
+	     addTextByPage(BookPages);
+	     addImgByPage(BookPages);
 		 if(BookPages>=9)
 		 {
 			 var3 = 4;

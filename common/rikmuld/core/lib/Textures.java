@@ -9,6 +9,7 @@ public class Textures {
 	public static final String SPRITE_BLOCK = "Blocks.png";
 	public static final String SPRITE_ITEM= "Items.png";
 	public static final String SPRITE_PARTICLES= "Particles.png";
+	public static final String SPRITE_BUTTONS = "Buttons.png";
 	
 	public static final String MODEL_CAMPER_MALE= "CamperMale.png";
 	public static final String MODEL_CAMPER_FEMALE= "CamperFemale.png";
