@@ -13,11 +13,13 @@ import rikmuld.core.lib.Textures;
 public class GuiButtonGuidePage extends GuiButton
 {
     private final boolean nextPage;
+    private int page;
 
-    public GuiButtonGuidePage(int par1, int par2, int par3, boolean par4)
+    public GuiButtonGuidePage(int par1, int par2, int par3, boolean par4, int bookpage)
     {
         super(par1, par2, par3, 23, 13, "");
         this.nextPage = par4;
+        page = bookpage;
     }
 
     public void drawButton(Minecraft par1Minecraft, int par2, int par3)
@@ -30,7 +32,7 @@ public class GuiButtonGuidePage extends GuiButton
             int var5 = 0;
             int var6 = 192;
 
-            if (var4)
+            if ((var4)||(this.nextPage&&page==5)||(!this.nextPage&&page==0))
             {
                 var5 += 23;
             }
