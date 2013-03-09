@@ -13,7 +13,7 @@ public class ModRecipies {
 		GameRegistry.addShapelessRecipe(ItemStacks.canvas_10, ItemStacks.string, ItemStacks.string, ItemStacks.string, ItemStacks.string, ItemStacks.string, ItemStacks.string, ItemStacks.toolCampDamage);
 		
 		GameRegistry.addRecipe(ItemStacks.tent1, "xxx", "x x", "y y", 'x', ItemStacks.canvas, 'y',ItemStacks.tentPegs);
-		GameRegistry.addRecipe(ItemStacks.SleepBag, "   ", "   ", "xxx", 'x', ItemStacks.wool);
+		GameRegistry.addRecipe(ItemStacks.SleepBag, "xxx", 'x', ItemStacks.wool);
 		GameRegistry.addRecipe(ItemStacks.toolCampNoDamage, "yxy", "yxy", "yxy", 'x', ItemStacks.iron, 'y', ItemStacks.rosered);
 		GameRegistry.addRecipe(ItemStacks.campfire, " x ", "xyx", "zzz", 'x', ItemStacks.torch, 'y', ItemStacks.flint, 'z', ItemStacks.stone);
 		GameRegistry.addRecipe(ItemStacks.campfireMulti, " x ", "xyx", " x ", 'x', ItemStacks.furnace, 'y', ItemStacks.campfire);
