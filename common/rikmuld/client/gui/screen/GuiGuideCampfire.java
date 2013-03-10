@@ -15,6 +15,8 @@ public class GuiGuideCampfire extends GuiGuide {
 		this.BookPagesTotaal = 5;
 	}
 	
+	
+	
 	@Override
 	public void addTextByPage(int page)
 	{
@@ -25,42 +27,42 @@ public class GuiGuideCampfire extends GuiGuide {
 		{
 			 GL11.glPushMatrix();
 			 GL11.glScalef(1.10F, 1.10F, 1.10F);
-			 drawString(fontRenderer,"Campfire", var1+44, var2+21, 0x3b3b3b);
+			 fontRenderer.drawString("Campfire", var1+44, var2+21, 0x2b2b2b, false);
 			 GL11.glPopMatrix();
 		}
 		if(page==1)
 		{
 			 GL11.glPushMatrix();
 			 GL11.glScalef(1.10F, 1.10F, 1.10F);
-			 drawString(fontRenderer,"The Decoration", var1+26, var2+11, 0x3b3b3b);
+			 fontRenderer.drawString("The Decoration", var1+26, var2+11, 0x2b2b2b, false);
 			 GL11.glPopMatrix();
 	    }
 		if(page==2)
 		{
 			 GL11.glPushMatrix();
 			 GL11.glScalef(1.10F, 1.10F, 1.10F);
-			 drawString(fontRenderer,"The Multi-Cooking", var1+22, var2+11, 0x3b3b3b);
+			 fontRenderer.drawString("The Multi-Cooking", var1+22, var2+11, 0x2b2b2b, false);
 			 GL11.glPopMatrix();
 	    }
 		if(page==3)
 		{
 			 GL11.glPushMatrix();
 			 GL11.glScalef(1.10F, 1.10F, 1.10F);
-			 drawString(fontRenderer,"The Fast-Cooking", var1+22, var2+11, 0x3b3b3b);
+			 fontRenderer.drawString("The Fast-Cooking", var1+22, var2+11, 0x2b2b2b, false);
 			 GL11.glPopMatrix();
 	    }
 		if(page==4)
 		{
 			 GL11.glPushMatrix();
 			 GL11.glScalef(1.10F, 1.10F, 1.10F);
-			 drawString(fontRenderer,"The Cheap-Cooking", var1+19, var2+11, 0x3b3b3b);
+			 fontRenderer.drawString("The Cheap-Cooking", var1+19, var2+11, 0x2b2b2b, false);
 			 GL11.glPopMatrix();
 	    }
 		if(page==5)
 		{
 			 GL11.glPushMatrix();
 			 GL11.glScalef(1.10F, 1.10F, 1.10F);
-			 drawString(fontRenderer,"The Insta-Cooking", var1+20, var2+11, 0x3b3b3b);
+			 fontRenderer.drawString("The Insta-Cooking", var1+20, var2+11, 0x2b2b2b, false);
 			 GL11.glPopMatrix();
 	    }
 	}
