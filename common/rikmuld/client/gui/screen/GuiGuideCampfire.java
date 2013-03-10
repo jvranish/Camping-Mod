@@ -18,14 +18,49 @@ public class GuiGuideCampfire extends GuiGuide {
 	@Override
 	public void addTextByPage(int page)
 	{
+		 int var1 = MathHelper.floor_float((this.width - this.bookImageWidth) / 2.2F);
+		 int var2 = MathHelper.floor_float((this.height - this.bookImageHeight) / 2.2F);
+		 
+		if(page!=0)
+		{
+			 GL11.glPushMatrix();
+			 GL11.glScalef(1.10F, 1.10F, 1.10F);
+			 drawString(fontRenderer,"Campfire", var1+44, var2+21, 0x3b3b3b);
+			 GL11.glPopMatrix();
+		}
 		if(page==1)
 		{
-			 int var1 = MathHelper.floor_float((this.width - this.bookImageWidth) / 2.4F);
-			 int var2 = MathHelper.floor_float((this.height - this.bookImageHeight) / 2.4F);
 			 GL11.glPushMatrix();
-			 GL11.glScalef(1.2F, 1.2F, 1.2F);
-			 drawString(fontRenderer,"The Decoration", var1+20, var2+11, 0x3b3b3b);
-			 drawString(fontRenderer,"Campfire", var1+39, var2+21, 0x3b3b3b);
+			 GL11.glScalef(1.10F, 1.10F, 1.10F);
+			 drawString(fontRenderer,"The Decoration", var1+26, var2+11, 0x3b3b3b);
+			 GL11.glPopMatrix();
+	    }
+		if(page==2)
+		{
+			 GL11.glPushMatrix();
+			 GL11.glScalef(1.10F, 1.10F, 1.10F);
+			 drawString(fontRenderer,"The Multi-Cooking", var1+22, var2+11, 0x3b3b3b);
+			 GL11.glPopMatrix();
+	    }
+		if(page==3)
+		{
+			 GL11.glPushMatrix();
+			 GL11.glScalef(1.10F, 1.10F, 1.10F);
+			 drawString(fontRenderer,"The Fast-Cooking", var1+22, var2+11, 0x3b3b3b);
+			 GL11.glPopMatrix();
+	    }
+		if(page==4)
+		{
+			 GL11.glPushMatrix();
+			 GL11.glScalef(1.10F, 1.10F, 1.10F);
+			 drawString(fontRenderer,"The Cheap-Cooking", var1+19, var2+11, 0x3b3b3b);
+			 GL11.glPopMatrix();
+	    }
+		if(page==5)
+		{
+			 GL11.glPushMatrix();
+			 GL11.glScalef(1.10F, 1.10F, 1.10F);
+			 drawString(fontRenderer,"The Insta-Cooking", var1+20, var2+11, 0x3b3b3b);
 			 GL11.glPopMatrix();
 	    }
 	}
@@ -43,11 +78,27 @@ public class GuiGuideCampfire extends GuiGuide {
 			 if(page==1) 
 			 {
 				 this.drawTexturedModalRect(((this.width - this.bookImageWidth) / 2)+67, ((this.height - this.bookImageHeight) / 2)+75, 0, 0, 50, 50);
-				 this.drawTexturedModalRect(((this.width - this.bookImageWidth) / 2)+120, ((this.height - this.bookImageHeight) / 2)+8, 0, 51, 29, 33);
+				 this.drawTexturedModalRect(((this.width - this.bookImageWidth) / 2)+125, ((this.height - this.bookImageHeight) / 2)+8, 0, 51, 29, 33);
 			 }
 			 else if (page==2) 
 			 {
-				 
+				 this.drawTexturedModalRect(((this.width - this.bookImageWidth) / 2)+67, ((this.height - this.bookImageHeight) / 2)+75, 51, 0, 50, 50);
+				 this.drawTexturedModalRect(((this.width - this.bookImageWidth) / 2)+125, ((this.height - this.bookImageHeight) / 2)+8, 51, 51, 29, 33);
+			 }
+			 else if (page==3) 
+			 {
+				 this.drawTexturedModalRect(((this.width - this.bookImageWidth) / 2)+67, ((this.height - this.bookImageHeight) / 2)+75, 102, 0, 50, 50);
+				 this.drawTexturedModalRect(((this.width - this.bookImageWidth) / 2)+125, ((this.height - this.bookImageHeight) / 2)+8, 102, 51, 29, 33);
+			 }
+			 else if (page==4) 
+			 {
+				 this.drawTexturedModalRect(((this.width - this.bookImageWidth) / 2)+67, ((this.height - this.bookImageHeight) / 2)+75, 153, 0, 50, 50);
+				 this.drawTexturedModalRect(((this.width - this.bookImageWidth) / 2)+125, ((this.height - this.bookImageHeight) / 2)+8, 153, 51, 29, 33);
+			 }
+			 else if (page==5) 
+			 {
+				 this.drawTexturedModalRect(((this.width - this.bookImageWidth) / 2)+67, ((this.height - this.bookImageHeight) / 2)+75, 204, 0, 50, 50);
+				 this.drawTexturedModalRect(((this.width - this.bookImageWidth) / 2)+125, ((this.height - this.bookImageHeight) / 2)+8, 204, 51, 29, 33);
 			 }
 		}
 	}
