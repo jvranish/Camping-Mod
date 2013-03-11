@@ -72,7 +72,7 @@ public class GuiGuide extends GuiScreen{
 		 {
 			 var3 = 4;
 		 }
-		 drawString(fontRenderer,Integer.toString(BookPages+1), var1+89-var3, var2 + 145, 4210752);
+		 fontRenderer.drawString(Integer.toString(BookPages+1), var1+89-var3, var2 + 145, 0x2b2b2b, false);
 	     super.drawScreen(par1, par2, par3);
 	}
 }

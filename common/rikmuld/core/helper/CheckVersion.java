@@ -26,7 +26,7 @@ import rikmuld.core.lib.ModInfo;
 
 public class CheckVersion {
 	
-	public static final String MOD_MESSAGE_VERSION_NEW = "There is an Updated version off the camping mod";
+	public static final String MOD_MESSAGE_VERSION_NEW = "There is an Updated version of the camping mod";
 	public static final String MOD_MESSAGE_VERSION_VERSION = "Version: ";
 	public static final String MOD_MESSAGE_VERSION_GOOD = "Your camping mod is up to date";
 	public static final String MOD_MESSAGE_VERSION_DATE = "The version came out at: ";
