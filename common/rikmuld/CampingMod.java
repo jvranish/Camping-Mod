@@ -49,7 +49,7 @@ public class CampingMod {
 	public void preInit(FMLPreInitializationEvent event)
 	{
 		ModLogger.preinit();
-		ModConfig.preInit(new File(event.getModConfigurationDirectory().getAbsolutePath() + "\\Camping\\" + ModInfo.MOD_ID + ".cfg"));
+		ModConfig.preInit(new File(event.getModConfigurationDirectory().getAbsolutePath() + "/Camping/" + ModInfo.MOD_ID + ".cfg"));
 	}
 	
 	@Init
